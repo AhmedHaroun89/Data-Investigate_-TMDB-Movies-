@@ -1,28 +1,22 @@
-Introduction
-This data set contains information about 10,000 movies collected from The Movie Database (TMDb), including user ratings and revenue.
+# TMDb-Movie-Data
+This project dives into a dataset provided by The Movie Database (TMDb) on thousands of different movies. 
+The various properties associated with movies are visualized using multiple different plots to identify patterns in the data
+and answer the key question.
 
-Certain columns, like ‘cast’ and ‘genres’, contain multiple values separated by pipe (|) characters.
-There are some odd characters in the ‘cast’ column. Don’t worry about cleaning them. You can leave them as is.
-The final two columns ending with “_adj” show the budget and revenue of the associated movie in terms of 2010 dollars, accounting for inflation over time.
-Objectives:
-Know all the steps involved in a typical data analysis process
-Be comfortable posing questions that can be answered with a given dataset and then answering those questions
-Investigate problems in a dataset and wrangle the data into a format that can be used
-Communicating the results of your analysis
-Softwares needed:
-*You will need an installation of Python, plus the following libraries:
+## Key Question
 
-pandas
-NumPy
-Matplotlib
-csv
-A text editor, like VS Code or Atom.
-A terminal application (Terminal on Mac and Linux or Cygwin on Windows).
-Installation links for softwares:
-Git for windows - for terminal application using Git Bash
-Python using Anaconda (latest version for windows)
-Visual Studio Code Editor (for windows)
-References:
-TMDB Movies Datasets
-Pandas Documentation
-Matplotlib Documentation
+_What properties are associated with highly rated movies?_
+
+## Data Wrangling & Cleaning
+
+The dataset is loaded into a dataframe from the file called *tmdb-movies.csv*. The data is inspected and cleaned for analysis. Duplicate rows and irrelevant columns are removed, variables are renamed, and null values are dropped. 
+
+## Exploratory Data Analysis
+
+The first step in exploring the data and uncovering insightful conclusions related to the key question is to define the question. _Highly rated_ can be defined in many ways using this dataset since two columns can represent this: 'vote_average' and 'popularity'. To conduct further analyses on this metric, the more sufficient column must be chosen to define *highly rated*. In order to choose this, box plots for both are visualized which indicate that 'vote_average' is more evenly distributed and thus easier to decipher and work with. Moving forward, all analyses will be done against this column.  
+
+## Tools
+
+* tmdb-movies.csv
+* Python
+* Jupyter notebook
